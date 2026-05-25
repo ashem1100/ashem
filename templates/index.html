@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="fa_IR">
 
@@ -9,12 +9,12 @@
     <title>Ashkan Emami</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+    <link rel="stylesheet" href="{% static 'css/iconir.css' %}">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
 
-    <link rel="stylesheet" href="assets/css/style.rtl.css">
+    <link rel="stylesheet" href="{% static 'css/style.rtl.css' %}">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="gx-row d-flex align-items-center justify-content-between">
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo.svg" alt="Logo">
+                        <img src="{% static 'images/logo.svg' %}" alt="Logo">
                     </a>
 
                     <nav class="navbar">
@@ -57,16 +57,16 @@
                     <div class="col-md-6" data-aos="zoom-in">
                         <div class="about-me-box shadow-box">
                             <a class="overlay-link" href="about.html"></a>
-                            <img src="assets/images/bg1.png" alt="BG" class="bg-img">
+                            <img src="{% static 'images/bg1.png' %}" alt="BG" class="bg-img">
                             <div class="img-box">
-                                <img src="assets/images/me.png" alt="About Me">
+                                <img src="{% static 'images/me.png' %}" alt="About Me">
                             </div>
                             <div class="infos">
                                 <h4 style="padding-bottom: 15px">یک مهندس نرم‌افزار</h4>
                                 <h1>اشکان امامی</h1>
                                 <p>علاقه‌مند به برنامه‌نویسی، ورزش، ریاضیات، کتاب، ...</p>
                                 <a href="index.html#" class="about-btn">
-                                    <img id="rdt" src="assets/images/icon.svg" alt="Button">
+                                    <img id="rdt" src="{% static 'images/icon.svg' %}" alt="Button">
                                 </a>
                             </div>
                         </div>
@@ -79,9 +79,9 @@
                                     <div class="marquee">
                                         <div>
                                             <span>
-                                                <img src="./assets/images/star1.svg" alt="Star">
+                                                <img src="{% static 'images/star1.svg' %}" alt="Star">
                                                 در شرایط فیلترنت ملی! ایمیل من: me@ashem.ir
-                                                <img src="./assets/images/star1.svg" alt="Star">
+                                                <img src="{% static 'images/star1.svg' %}" alt="Star">
 
                                             </span>
 
@@ -95,8 +95,8 @@
                                 <div data-aos="zoom-in">
                                     <div class="about-crenditials-box info-box shadow-box h-full">
                                         <a class="overlay-link" href="credentials.html"></a>
-                                        <img src="assets/images/bg1.png" alt="BG" class="bg-img">
-                                        <img src="assets/images/sign.png" alt="Sign">
+                                        <img src="{% static 'images/bg1.png' %}" alt="BG" class="bg-img">
+                                        <img src="{% static 'images/sign.png' %}" alt="Sign">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="infos">
                                                 <h4>دانلود</h4>
@@ -104,7 +104,7 @@
                                             </div>
 
                                             <a href="credentials.html" class="about-btn">
-                                                <img id="rdt" src="assets/images/icon.svg" alt="Button">
+                                                <img id="rdt" src="{% static 'images/icon.svg' %}" alt="Button">
                                             </a>
 
                                         </div>
@@ -114,8 +114,8 @@
                                 <div data-aos="zoom-in">
                                     <div class="about-project-box info-box shadow-box h-full">
                                         <a class="overlay-link" href="works.html"></a>
-                                        <img src="assets/images/bg1.png" alt="BG" class="bg-img">
-                                        <img src="assets/images/my-work.png" alt="کارهای من">
+                                        <img src="{% static 'images/bg1.png' %}" alt="BG" class="bg-img">
+                                        <img src="{% static 'images/my-work.png' %}" alt="کارهای من">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="infos">
                                                 <h4>مشاهده</h4>
@@ -123,7 +123,7 @@
                                             </div>
 
                                             <a href="index.html#" class="about-btn">
-                                                <img id="rdt" src="assets/images/icon.svg" alt="Button">
+                                                <img id="rdt" src="{% static 'images/icon.svg' %}" alt="Button">
                                             </a>
 
                                         </div>
@@ -141,13 +141,13 @@
 
                             <div data-aos="zoom-in">
                                 <div class="about-profile-box info-box shadow-box h-full">
-                                    <img src="assets/images/bg1.png" alt="BG" class="bg-img">
+                                    <img src="{% static 'images/bg1.png' %}" alt="BG" class="bg-img">
                                     <div class="inner-profile-icons shadow-box">
                                         <a href="https://x.com/ashem1100">
                                             <i class="iconoir-x"></i>
                                         </a>/
                                         <a href="https://virgool.io/@ashem">
-                                            <img style="width: 48px" src="assets/images/virgool.svg">
+                                            <img style="width: 48px" src="{% static 'images/virgool.svg' %}">
                                         </a>
 
                                     </div>
@@ -158,7 +158,7 @@
                                         </div>
 
                                         <a href="about.html" class="about-btn">
-                                            <img id="rdt" src="assets/images/icon.svg" alt="Button">
+                                            <img id="rdt" src="{% static 'images/icon.svg' %}" alt="Button">
                                         </a>
 
                                     </div>
@@ -169,9 +169,9 @@
                             <div data-aos="zoom-in" class="flex-1">
                                 <div class="about-services-box info-box shadow-box h-full">
                                     <a href="#" class="overlay-link"></a>
-                                    <img src="assets/images/bg1.png" alt="BG" class="bg-img">
+                                    <img src="{% static 'images/bg1.png' %}" alt="BG" class="bg-img">
                                     <div class="about-client-box info-box">
-                                        <img src="assets/images/bg1.png" alt="BG" class="bg-img">
+                                        <img src="{% static 'images/bg1.png' %}" alt="BG" class="bg-img">
                                         <div class="clients d-flex align-items-start gap-24 justify-content-center">
                                             <div class="client-item">
                                                 <h1>9635</h1>
@@ -197,8 +197,8 @@
                             <div data-aos="zoom-in">
                                 <div class="about-blog-box info-box shadow-box h-full">
                                     <a href="https://www.youtube.com/@GorillaCodeorg" class="overlay-link"></a>
-                                    <img src="assets/images/bg1.png" alt="BG" class="bg-img">
-                                    <img  src="assets/images/gorilla.svg" alt="gorilla">
+                                    <img src="{% static 'images/bg1.png' %}" alt="BG" class="bg-img">
+                                    <img  src="{% static 'images/gorilla.svg' %}" alt="gorilla">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="infos">
                                             <h4>یوتیوب</h4>
@@ -206,7 +206,7 @@
                                         </div>
 
                                         <a href="https://www.youtube.com/@GorillaCodeorg" class="about-btn">
-                                            <img id="rdt" src="assets/images/icon.svg" alt="Button">
+                                            <img id="rdt" src="{% static 'images/icon.svg' %}" alt="Button">
                                         </a>
 
                                     </div>
@@ -255,7 +255,7 @@
             <div class="container">
                 <div class="footer-content text-center">
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo.svg" alt="Logo">
+                        <img src="{% static 'images/logo.svg' %}" alt="Logo">
                     </a>
                     <ul class="footer-menu">
                         <li><a href="index.html">خانه</a></li>
@@ -272,13 +272,15 @@
             </div>
         </footer>
 
+
     </main>
 
 
-    <script src="assets/js/jquery-3.6.4.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+
+    <script src="{% static 'js/jquery-3.6.4.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
