@@ -15,6 +15,10 @@ class Post(models.Model):
     #categories
     #tags
     #views
+    class Meta:
+        ordering = ('create_date',)
+    def __str__(self):
+        return self.title
 
 class Category (models.Model):
     name = models.CharField(max_length=200)
