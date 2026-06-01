@@ -14,7 +14,7 @@ class Post(models.Model):
     #main pic
     #categories
     #tags
-    #views
+    views = models.IntegerField(default=0)
     class Meta:
         ordering = ('create_date',)
     def __str__(self):

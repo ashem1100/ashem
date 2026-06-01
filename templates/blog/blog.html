@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="breadcrumb-content" data-aos="fade-up">
                     <p>خانه - بلاگ</p>
-                    <h1 class="section-heading"><img src="{% static 'images/star-2.png' %}" alt="Star"> وبلاگ با نوار سمت چپ <img src="{% static 'images/star-2.png' %}" alt="Star"></h1>
+                    <h1 class="section-heading"><img src="{% static 'images/star-2.png' %}" alt="Star"> بلاگ <img src="{% static 'images/star-2.png' %}" alt="Star"></h1>
                 </div>
             </div>
         </section>
@@ -20,17 +20,19 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="blog-items">
+                        {% for post in posts %}
                             <div class="blog-item" data-aos="zoom-in">
                                 <div class="img-box">
                                     <img src="{% static 'images/blog1.jpeg' %}" alt="Blog">
                                 </div>
                                 <div class="content">
-                                    <span class="meta">6 مرداد 1402 - نظرات (4) - اشتراک گذاری (7)</span>
-                                    <h1><a href="{% url 'blog:post' %}">{{ posts.title }}</a></h1>
+                                    <span class="meta">6 مرداد 1402 - بازدید ({{ post.views }}) - اشتراک گذاری (7)</span>
+                                    <h1><a href="{% url 'blog:post' %}">{{ post.title }}</a></h1>
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
                                     <a href="{% url 'blog:post' %}" class="theme-btn">بیشتر بخوانید</a>
                                 </div>
                             </div>
+                        {% endfor %}
 
                             
                         </div>
