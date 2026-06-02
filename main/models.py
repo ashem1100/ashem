@@ -33,8 +33,13 @@ class EducationInformation(models.Model):
 class SkillInformation(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=100)
+    def __str__(self):
+        return self.title
+
 
 class CertificateInformation(models.Model):
     title = models.CharField(max_length=100)
     certificator = models.CharField(max_length=100)
     date = models.DateField(null=True)
+    def __str__(self):
+        return self.title
