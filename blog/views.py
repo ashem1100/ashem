@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from blog.models import *
 
 # Create your views here.
@@ -8,5 +8,7 @@ def blogindex(request):
     context = {'posts': posts}
     return render(request, 'blog/blog.html', context)
 
-def post(request):
-    return render(request, 'blog/blog-details.html')
+def viewpost(request, id):
+    post = Post.objects.filter(status=True)
+    context = {'post': get_object_or_404(post, id=id)}
+    return render(request, 'blog/blog-details.html', context)
