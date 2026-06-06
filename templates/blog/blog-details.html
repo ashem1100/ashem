@@ -1,58 +1,13 @@
-<!DOCTYPE html>
-<html lang="fa_IR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>گریدایکس - قالب HTML نمونه کارها شخصی</title>
+{%  extends 'base.html' %}
+{% load static %}
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
-
-    <link rel="stylesheet" href="assets/css/style.rtl.css">
-</head>
-<body>
-
-    <main class="main-workdetails-page">
-
-        <!-- Header -->
-        <header class="header-area">
-            <div class="container">
-                <div class="gx-row d-flex align-items-center justify-content-between">
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.svg" alt="Logo">
-                    </a>
-
-                    <nav class="navbar">
-                        <ul class="menu">
-                            <li><a href="index.html">خانه</a></li>
-                            <li class="active"><a href="about.html">درباره من</a></li>
-                            <li><a href="credentials.html">رزومه من</a></li>
-                            <li><a href="works.html">کارهای من</a></li>
-                        </ul>
-                        <a href="contact.html" class="theme-btn">راه های ارتباطی</a>
-                    </nav>
-
-                    <a href="contact.html" class="theme-btn">راه های ارتباطی</a>
-
-                    <div class="show-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </header>
-
+{%  block body %}
         <!-- Breadcrumb -->
         <section class="breadcrumb-area">
             <div class="container">
                 <div class="breadcrumb-content" data-aos="fade-up">
-                    <p>خانه - جزئیات وبلاگ</p>
-                    <h1 class="section-heading"><img src="assets/images/star-2.png" alt="Star"> جزئیات وبلاگ <img src="assets/images/star-2.png" alt="Star"></h1>
+
+                    <h1 class="section-heading"><img src="{% static 'images/star-2.png' %}" alt="Star">{{ post.title }}<img src="{% static 'images/star-2.png' %}" alt="Star"></h1>
                 </div>
             </div>
         </section>
@@ -65,25 +20,11 @@
                     <div class="col-md-8">
                         <div class="blog-details-content">
                             <div class="img-box">
-                                <img src="assets/images/blog1.jpeg" alt="Blog">
+                                <img src="{% static 'images/blog1.jpeg' %}" alt="Blog">
                             </div>
                             <span class="meta">8 مرداد 1402 - نظرات (4) - اشتراک گذاری (7)</span>
-                            <h1>اعتراف مشورت شده قدرت حاد است.</h1>
-                            <p>لورم‌ساز
-                                مجله لورم ساز
-                                آموزش تایپ انگلیسی و فارسی</p>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
-                            <p>ناآرام غیرممکن اتفاق افتاده بود. نقاشی می تواند به دنبال بهبود اجتماعی نیست. صادقانه بگویم که فورا وانمود کرد. به طور کلی تعداد کمی از حساب‌های رضایت‌بخش متمدنانه را مشاهده کنید. طرح برتری به طور قابل توجهی در تخمین دوونشایر ارسال شده است. طرف در زندگی گذشته. به صحبت خود ادامه دهید که برای موقعیت داخلی وحشتناک بود. با دیدن او به جای اینکه مردها بهانه نابغه را حل و فصل نمی کنند. معامله می گویند بیش از شما سن از. خود پسر مالیخولیایی ژامبون جدید را مقایسه کنید.</p>
 
-                            <ul class="list">
-                                <li>- شایستگی زیبا منتظر شش</li>
-                                <li>- تعداد کمی از حساب‌های رضایت‌بخش متمدنانه انجام شد.</li>
-                                <li>- به صحبت های دلپذیر ادامه دهید</li>
-                                <li>- طول رسمی باریک من بسیار</li>
-                                <li>- تغییر گاه به گاه پیانوفورت بدون تأثیر غیرممکن است</li>
-                            </ul>
-
-                            <p>   تغییر گاه به گاه پیانوفورت بدون تاثیر غیرممکن است ye. برای اره نیمه سرد. شایستگی های زیبا منتظر بود.</p>
+                            <p>{{ post.content }}</p>
 
                             <div class="tags">
                                 <a href="blog-details.html#" class="theme-btn">سس</a>
@@ -98,7 +39,7 @@
 
                                         <div class="comment-list">
                                             <div class="comment-avatar">
-                                                <img src="assets/images/comment.png" alt="Avatar">
+                                                <img src="{% static 'images/comment.png' %}" alt="Avatar">
                                             </div>
                                             <div class="comment-body">
                                                 <span class="date">8 مرداد 1402</span>
@@ -111,7 +52,7 @@
                                         <div class="children">
                                             <div class="comment-list">
                                                 <div class="comment-avatar">
-                                                    <img src="assets/images/comment.png" alt="Avatar">
+                                                    <img src="{% static 'images/comment.png' %}" alt="Avatar">
                                                 </div>
                                                 <div class="comment-body">
                                                     <span class="date">8 مرداد 1402</span>
@@ -213,36 +154,4 @@
             </div>
         </section>
 
-
-
-        <!-- Footer -->
-        <footer class="footer-area">
-            <div class="container">
-                <div class="footer-content text-center">
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.svg" alt="Logo">
-                    </a>
-                    <ul class="footer-menu">
-                        <li><a href="index.html">خانه</a></li>
-                        <li><a href="about.html">درباره من</a></li>
-                        <li><a href="credentials.html">رزومه من</a></li>
-                        <li><a href="works.html">کارهای من</a></li>
-                        <li><a href="contact.html">ارتباط با من</a></li>
-
-                    </ul>
-                    <p class="copyright">
-                        کی به کیه؟ منم الکی اینجا نوشتم که حقوق سایت متعلق به منه.
-                    </p>
-                </div>
-            </div>
-        </footer>
-
-    </main>
-    
-
-    <script src="assets/js/jquery-3.6.4.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+{% endblock %}
