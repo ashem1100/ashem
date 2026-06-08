@@ -5,5 +5,5 @@ from blog.models import *
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'create_date', 'status', 'publish_date', 'update_date')
     list_filter = ('status', 'author')
-    search_fields = ('title','author')
+    search_fields = ('title', 'author__username', 'author__first_name', 'author__last_name')
 admin.site.register(Post, PostAdmin)
