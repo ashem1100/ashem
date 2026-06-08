@@ -12,7 +12,7 @@ class Post(models.Model):
     publish_date = models.DateTimeField(null=True)
     status = models.BooleanField(default=False)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    #main pic
+    main_pic = models.ImageField(upload_to='blog/', default='blog/blog1.jpeg')
     #categories
     #tags
     views = models.IntegerField(default=0)

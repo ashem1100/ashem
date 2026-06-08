@@ -23,7 +23,7 @@
                         {% for post in posts %}
                             <div class="blog-item" data-aos="zoom-in">
                                 <div class="img-box">
-                                    <img src="{% static 'images/blog1.jpeg' %}" alt="Blog">
+                                    <img src="{{ post.main_pic.url }}" alt="Blog">
                                 </div>
                                 <div class="content">
                                     <span class="meta">6 مرداد 1402 - بازدید ({{ post.views }}) - اشتراک گذاری (7)</span>
