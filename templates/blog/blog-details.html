@@ -22,6 +22,7 @@
                             <div class="img-box">
                                 <img src="{% static 'images/blog1.jpeg' %}" alt="Blog">
                             </div>
+                            <span class="meta">نویسنده: {{ post.author.get_full_name }}</span>
                             <span class="meta">8 مرداد 1402 - نظرات (4) - اشتراک گذاری (7)</span>
 
                             <p>{{ post.content }}</p>

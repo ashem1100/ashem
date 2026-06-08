@@ -1,5 +1,6 @@
 from symtable import Class
 
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
@@ -10,7 +11,7 @@ class Post(models.Model):
     update_date = models.DateTimeField(auto_now=True)
     publish_date = models.DateTimeField(null=True)
     status = models.BooleanField(default=False)
-    #author
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     #main pic
     #categories
     #tags
