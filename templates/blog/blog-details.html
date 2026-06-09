@@ -121,11 +121,11 @@
                                         <h3>دسته بندی ها</h3>
 
                                         <ul>
-                                            <li><a href="blog-details.html">-آنالیز</a></li>
-                                            <li><a href="blog-details.html">-دیواره آتش</a></li>
-                                            <li><a href="blog-details.html">-راه حل های فناوری اطلاعات</a></li>
-                                            <li><a href="blog-details.html">-امنیت</a></li>
-                                            <li><a href="blog-details.html">-فن آوری</a></li>
+
+                                            {% for category in post.categories.all %}
+
+                                            <li><a href="#">{{ category.name }}</a></li>
+                                            {% endfor %}
                                         </ul>
 
                                     </div>
