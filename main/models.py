@@ -4,8 +4,12 @@ from django.db import models
 class BaseInformation(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    profile = models.ImageField(upload_to='info/', null=True)
-    cvlink =models.URLField(blank=True, null=True)
+    profile = models.ImageField(upload_to='info/', default='info/defaultprofile.jpg')
+    cv =models.FileField(upload_to='info/doc/', null=True)
+    github_link = models.URLField(blank=True, null=True)
+    telegram_link = models.URLField(blank=True, null=True)
+    linkedin_link = models.URLField(blank=True, null=True)
+    x_link =models.URLField(blank=True, null=True)
     about = models.TextField(null=True)
     def __str__(self):
         return self.name
