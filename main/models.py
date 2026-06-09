@@ -4,7 +4,7 @@ from django.db import models
 class BaseInformation(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    profile = models.ImageField(blank=True, null=True)
+    profile = models.ImageField(upload_to='info/', null=True)
     cvlink =models.URLField(blank=True, null=True)
     about = models.TextField(null=True)
     def __str__(self):
