@@ -26,9 +26,9 @@
                                     <img src="{{ post.main_pic.url }}" alt="Blog">
                                 </div>
                                 <div class="content">
-                                    <span class="meta">6 مرداد 1402 - بازدید ({{ post.views }}) - اشتراک گذاری (7)</span>
+                                    <span class="meta">{{ post.publish_date|date:"D M Y" }}</span>
                                     <h1><a href="{% url 'blog:viewpost' id=post.id %}">{{ post.title }}</a></h1>
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
+                                    <p>{{ post.content|truncatechars:150 }}</p>
                                     <a href="{% url 'blog:viewpost' id=post.id %}" class="theme-btn">بیشتر بخوانید</a>
                                 </div>
                             </div>

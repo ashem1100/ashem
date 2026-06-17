@@ -23,7 +23,7 @@
                                 <img src="{{ post.main_pic.url }}" alt="Blog">
                             </div>
                             <span class="meta">نویسنده: {{ post.author.get_full_name }}</span>
-                            <span class="meta">8 مرداد 1402 - نظرات (4) - اشتراک گذاری (7)</span>
+                            <span class="meta">{{ post.publish_date|date:"D M Y" }}</span>
 
                             <p>{{ post.content }}</p>
 
