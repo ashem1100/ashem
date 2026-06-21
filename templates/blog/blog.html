@@ -56,21 +56,7 @@
                             {% latestPosts %}
 
 
-                            <div class="blog-sidebar-widget categories-widget" data-aos="zoom-in">
-                                <div class="blog-sidebar-widget-inner shadow-box">
-                                    <h3>دسته بندی های اصلی</h3>
-
-                                    <ul>
-
-
-                                        {% for category in categories %}
-
-                                            <li><a href="#">{{ category.name }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-
-                                </div>
-                            </div>
+                            {% sidebarCategories %}
                             <div class="blog-sidebar-widget tags-widget" data-aos="zoom-in">
                                 <div class="blog-sidebar-widget-inner shadow-box">
                                     <h3>تگ ها</h3>

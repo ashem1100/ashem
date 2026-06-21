@@ -1,0 +1,15 @@
+<div class="blog-sidebar-widget categories-widget" data-aos="zoom-in">
+    <div class="blog-sidebar-widget-inner shadow-box">
+        <h3>دسته بندی های محبوب</h3>
+
+        <ul>
+
+
+            {% for cat,count in active_categories.items %}
+
+                <li><a href="#">{{ cat }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
