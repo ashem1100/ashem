@@ -1,0 +1,14 @@
+{% load static %}
+<div class="blog-sidebar-widget recent-post-widget" data-aos="zoom-in">
+    <div class="blog-sidebar-widget-inner shadow-box">
+        <h3>پستهای اخیر</h3>
+        {% for post in posts %}
+
+            <ul>
+                <li><a href="{% url 'blog:viewpost' id=post.id %}">{{ post.title }}</a></li>
+            </ul>
+            <br>
+        {% endfor %}
+
+    </div>
+</div>

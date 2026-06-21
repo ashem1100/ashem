@@ -1,6 +1,6 @@
 {%  extends 'base.html' %}
 {% load static %}
-
+{%  load blogtags %}
 {%  block body %}
         <!-- Breadcrumb -->
         <section class="breadcrumb-area">
@@ -102,23 +102,12 @@
                                     </div>
                                 </div>
 
-                                <div class="blog-sidebar-widget recent-post-widget" data-aos="zoom-in">
-                                    <div class="blog-sidebar-widget-inner shadow-box">
-                                        <h3> پست های اخیر</h3>
+                            {% latestPosts %}
 
-                                        <ul>
-                                            <li><a href="blog-details.html">اعتراف مشورت شده قدرت حاد است.</a></li>
-                                            <li><a href="blog-details.html">درخواست های سیری ناپذیر ممکن است قدرت را جمع آوری کند.</a></li>
-                                            <li><a href="blog-details.html">اکتشاف ناآرام با جدیت هیچ او دستور داد</a></li>
-                                            <li><a href="blog-details.html">درخواست های سیری ناپذیر ممکن است قدرت را جمع آوری کند..</a></li>
-                                        </ul>
-
-                                    </div>
-                                </div>
 
                                 <div class="blog-sidebar-widget categories-widget" data-aos="zoom-in">
                                     <div class="blog-sidebar-widget-inner shadow-box">
-                                        <h3>دسته بندی ها</h3>
+                                        <h3>دسته بندی های این پست</h3>
 
                                         <ul>
 

@@ -5,7 +5,8 @@ from blog.models import *
 # Create your views here.
 def blogindex(request):
     posts = Post.objects.filter(status=True)
-    context = {'posts': posts}
+    categories = Category.objects.filter(parent=None)
+    context = {'posts': posts , 'categories': categories}
     return render(request, 'blog/blog.html', context)
 
 def viewpost(request, id):

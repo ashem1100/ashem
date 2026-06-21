@@ -1,25 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load blogtags %}
 
 {% block body %}
 
-        <!-- Breadcrumb -->
-        <section class="breadcrumb-area">
-            <div class="container">
-                <div class="breadcrumb-content" data-aos="fade-up">
-                    <p>خانه - بلاگ</p>
-                    <h1 class="section-heading"><img src="{% static 'images/star-2.png' %}" alt="Star"> بلاگ <img src="{% static 'images/star-2.png' %}" alt="Star"></h1>
-                </div>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-content" data-aos="fade-up">
+                <p>خانه - بلاگ</p>
+                <h1 class="section-heading"><img src="{% static 'images/star-2.png' %}" alt="Star"> بلاگ <img
+                        src="{% static 'images/star-2.png' %}" alt="Star"></h1>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <!-- Blog Items -->
-        <section class="blog-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="blog-items">
+    <!-- Blog Items -->
+    <section class="blog-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-items">
                         {% for post in posts %}
                             <div class="blog-item" data-aos="zoom-in">
                                 <div class="img-box">
@@ -34,65 +36,62 @@
                             </div>
                         {% endfor %}
 
-                            
-                        </div>
+
                     </div>
-                    <div class="col-md-4">
-                        <div class="blog-sidebar">
-                            <div class="blog-sidebar-inner">
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-sidebar">
+                        <div class="blog-sidebar-inner">
 
-                                <div class="blog-sidebar-widget search-widget">
-                                    <div class="blog-sidebar-widget-inner" data-aos="zoom-in">
-                                        <form class="shadow-box">
-                                            <input type="text" placeholder="اینجا جستجو کنید...">
-                                            <button class="theme-btn">جستجو</button>
-                                        </form>
-                                    </div>
+                            <div class="blog-sidebar-widget search-widget">
+                                <div class="blog-sidebar-widget-inner" data-aos="zoom-in">
+                                    <form class="shadow-box">
+                                        <input type="text" placeholder="اینجا جستجو کنید...">
+                                        <button class="theme-btn">جستجو</button>
+                                    </form>
                                 </div>
-
-                                <div class="blog-sidebar-widget recent-post-widget" data-aos="zoom-in">
-                                    <div class="blog-sidebar-widget-inner shadow-box">
-                                        <h3>پستهای اخیر</h3>
-
-                                        <ul>
-                                            <li><a href="#">اعتراف مشورت شده قدرت حاد است.</a></li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-
-                                <div class="blog-sidebar-widget categories-widget" data-aos="zoom-in">
-                                    <div class="blog-sidebar-widget-inner shadow-box">
-                                        <h3>دسته بندی ها</h3>
-
-                                        <ul>
-                                            <li><a href="#">-تکنولوژی</a></li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-
-                                <div class="blog-sidebar-widget tags-widget" data-aos="zoom-in">
-                                    <div class="blog-sidebar-widget-inner shadow-box">
-                                        <h3>تگ ها</h3>
-
-                                        <ul>
-                                            <li><a class="theme-btn" href="#">سس</a></li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-
                             </div>
+
+
+                            {% latestPosts %}
+
+
+                            <div class="blog-sidebar-widget categories-widget" data-aos="zoom-in">
+                                <div class="blog-sidebar-widget-inner shadow-box">
+                                    <h3>دسته بندی های اصلی</h3>
+
+                                    <ul>
+
+
+                                        {% for category in categories %}
+
+                                            <li><a href="#">{{ category.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="blog-sidebar-widget tags-widget" data-aos="zoom-in">
+                                <div class="blog-sidebar-widget-inner shadow-box">
+                                    <h3>تگ ها</h3>
+
+                                    <ul>
+                                        <li><a class="theme-btn" href="#">سس</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
 
 
 
-{%  endblock %}
+{% endblock %}
