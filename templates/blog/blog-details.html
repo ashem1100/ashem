@@ -113,7 +113,7 @@
 
                                             {% for category in post.categories.all %}
 
-                                            <li><a href="#">{{ category.name }}</a></li>
+                                            <li><a href="{% url 'blog:viewcategory' cat=category.name %}">{{ category.name }}</a></li>
                                             {% endfor %}
                                         </ul>
 

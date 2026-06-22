@@ -13,3 +13,9 @@ def viewpost(request, id):
     post = Post.objects.filter(status=True)
     context = {'post': get_object_or_404(post, id=id)}
     return render(request, 'blog/blog-details.html', context)
+
+def viewcategory(request, cat):
+    posts = Post.objects.filter(status=True)
+    posts = posts.filter(categories__name=cat)
+    context = {'posts': posts}
+    return render(request, 'blog/blog.html', context)
