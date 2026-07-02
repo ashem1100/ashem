@@ -28,6 +28,7 @@
                                     <img src="{{ post.main_pic.url }}" alt="Blog">
                                 </div>
                                 <div class="content">
+                                    <a href="{% url 'blog:viewauthor' author=post.author.username %}" class="meta">نویسنده: {{ post.author.get_full_name }}</a>
                                     <span class="meta">{{ post.publish_date|date:"D M Y" }}</span>
                                     <h1><a href="{% url 'blog:viewpost' id=post.id %}">{{ post.title }}</a></h1>
                                     <p>{{ post.content|truncatechars:150 }}</p>
