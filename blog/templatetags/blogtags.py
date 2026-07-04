@@ -24,3 +24,8 @@ def sidebarCategories():
     active_categories = dict(sorted(active_categories.items(), key=lambda t: t[1], reverse=True))
     active_categories = {cat:count for cat,count in active_categories.items() if count > 0}
     return {'active_categories': active_categories}
+
+@register.inclusion_tag('blog/search-box.html')
+def searchBox():
+    pass
+

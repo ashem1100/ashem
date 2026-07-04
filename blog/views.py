@@ -9,6 +9,10 @@ def blogindex(request, cat=None, author=None):
         posts = posts.filter(categories__name=cat)
     elif author:
         posts = posts.filter(author__username=author)
+
+    elif request.method == 'GET':
+        if s := request.GET.get('s'):
+            posts = posts.filter(title__contains=s)
     categories = Category.objects.filter(parent=None)
     context = {'posts': posts , 'categories': categories}
     return render(request, 'blog/blog.html', context)

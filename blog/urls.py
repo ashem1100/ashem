@@ -7,5 +7,6 @@ urlpatterns = [
     path('viewpost/<int:id>', viewpost, name='viewpost'),
     path('viewcategory/<str:cat>', blogindex, name='viewcategory'),
     path('viewauthor/<str:author>', blogindex, name='viewauthor'),
+    path('search/', blogindex, name='search'),
 
 ]
